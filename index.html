@@ -2,12 +2,17 @@
 <html>
 <head>
 <style>
-
 body {
   height: 1000px;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(to bottom right,rgba(161,144,204,255), rgba(114,153,204,255));
+
+  overflow-y: hidden;
+}
+body {
+  height: 1000px;
+  background-repeat: repeat;
+  background-image: linear-gradient(to bottom,rgb(161, 144, 204), rgb(114, 153, 204),rgb(161, 144, 204));
+
+  scrollbar-width: none; /*   overflow-y: hidden; */
 }
 
 .title {
@@ -21,12 +26,17 @@ body {
 
 .imgs {
   background-image: radial-gradient(rgba(0,0,0,0),rgba(0,0,0,0.1));
-  height: 700px;
+  height: 600px;
   margin-left: 25%;
   margin-right: 25%;
   border-radius: 5px;
   border: 2px solid #111111;
   overflow: auto;
+scrollbar-width: none;
+}
+
+.imgs::-webkit-scrollbar {
+  display: none;
 }
 
 .content-img{
@@ -51,7 +61,7 @@ img {
 }
 
 .catak-border {
-  background-color: rgba(255,255,255,0.2) !important;
+  background-color: rgba(255,255,255,0.005) !important;
   background-image: radial-gradient(rgba(0,0,0,0),rgba(0,0,0,0.2)), linear-gradient(rgba(150,255,255,0.9), rgba(0,0,0,0));
 }
 
@@ -69,16 +79,17 @@ background: linear-gradient(#000000,#FFFFFF);
 
 </style>
 <title>SpeedGun's thingyy</title>
+<link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
-
 <div class="title"><p style="text-align: center;">My awesome <i>first</i> <strong>CSS HTML</strong> page</p></div>
 
 <h2><p style="text-align: center;
 		  background: linear-gradient(#0000FF,#9999FF);  
   		  color: transparent;
 		  font-family: arial;
-    		  background-clip: text;">SOCIALS</p>
+    		  background-clip: text;
+		  text-shadow: 0px 0px 35px darkblue;">SOCIALS</p>
 </h2>
 <h4>
     <strong>
@@ -113,13 +124,22 @@ background: linear-gradient(#000000,#FFFFFF);
    	<a class="catak-link" href="https://github.com/pavlik609/catak">
 	   <img class="content-img" src="catak.png" alt="Desc"/>
         </a>
-        <p style="text-align: center;">CATAK - Create Your Frisk attack helper</p>
+	<p style="text-align: center;
+		font-size: 22px;
+		font-family: arial;
+		background: linear-gradient(#77AAFF,#DDEEFF);  
+  		color: transparent;
+		margin-top: 7px;
+		margin-bottom: -10px;
+    		background-clip: text;
+		text-shadow: 0px 0px 15px navy;">CATAK</p>
+	<p style="text-align: center;">Create Your Frisk attack helper</p>
    </div>
 
    <!--CYF-EASE-->
    <div class="border">
-   	<a class="catak-link" href="https://github.com/pavlik609/cyf-ease">
-	  <button class="button-center">no image</button>
+   	<a class="catak-link" href="https://github.com/pavlik609/cyf-easing">
+	  <button class="button-center">link</button>
         </a>
         <p style="text-align: center;
 		  font-size: 22px;
@@ -128,7 +148,8 @@ background: linear-gradient(#000000,#FFFFFF);
   		  color: transparent;
 		  margin-top: -1px;
 		  margin-bottom: -10px;
-    		  background-clip: text;">cyf-ease</p>
+    		  background-clip: text;
+		  text-shadow: 0px 0px 20px red;">cyf-ease</p>
 	<p style="text-align: center;">a Create Your Frisk easing library</p>
    </div>
 
@@ -145,6 +166,5 @@ background: linear-gradient(#000000,#FFFFFF);
         <p style="text-align: center;">UMBRALCHIMIA - A small game made for the Piratesoftware 2024 gamejam</p>
    </div>
 </div>
-
 </body>
 </html>

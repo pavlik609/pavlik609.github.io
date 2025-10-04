@@ -1,0 +1,107 @@
+#box {
+    position: absolute;
+    background-color: gray;
+    width: 10;
+    height: 10;
+}
+#myCanvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+#container {
+    width: fit-content;
+    height: auto;
+    margin: auto;
+}
+#socials {
+    /* width: 80%; */
+    width: fit-content;
+    height: auto;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 3px;
+    backdrop-filter: blur(2px);
+    display: grid;
+    margin-top: 10px;
+    padding: 1px;
+}
+#title {
+    color: white;
+    font-size: 40px;
+    margin: auto;
+    display: block;
+    width: fit-content;
+}
+#projects {
+    border: 1px solid gray;
+    border-radius: 3px;
+    /* border-style:; */
+    margin: auto;
+    width: 700px;
+    height: 450px;
+    backdrop-filter: blur(2px);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 8px;
+}
+.project {
+    padding: 5px;
+    border: 0.5px solid gray;
+    border-radius: 3px;
+    margin: 5px;
+    backdrop-filter: blur(2px);
+}
+.projectimg {
+    border: 0.5px solid gray;
+    border-radius: 7px;
+}
+.social {
+    padding: 5px;
+    /* border: 0.5px solid gray; */
+    border-radius: 3px;
+    grid-row: 10;
+    margin: 4px;
+    backdrop-filter: blur(2px);
+    width: 25px;
+    height: 25px;
+}
+.text {
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    width: fit-content;
+    white-space: pre-line;
+}
+.smalltext {
+    color: white;
+    font-size: 15px;
+    margin: auto;
+    width: fit-content;
+    /* white-space: pre-line; */
+}
+.socialimg {
+    filter: contrast(0) brightness(200%);
+    width: 25px;
+    transition: 0.3s;
+}
+.socialimg:hover {
+    filter: brightness(50%) sepia(100) saturate(10) brightness(100) hue-rotate(0deg);
+    width: 35px;
+    transform: translate(-5px,-5px);
+}
+
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+
+html, body {margin: 0; height: 100%; overflow: hidden}

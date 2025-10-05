@@ -11,10 +11,13 @@
  *
  *
  * */
-const w = 1920;
-const h = 1080;
+let w = 1920;
+let h = 1080;
 const clearing = -50;
 const dist = 100;
+
+// This means 1920x1080 is 100 points
+const pixels_per_point = 20736;
 
 let points = [];
 
@@ -51,13 +54,13 @@ function update_points(){
         
         point.x += point.vx;
         point.y += point.vy;
-        if(point.x > w){
+        if(point.x > w-clearing){
             point.x = clearing;
         }
         if(point.x < clearing){
             point.x = w;
         }
-        if(point.y > h){
+        if(point.y > h-clearing){
             point.y = clearing;
         }
         if(point.y < clearing){
@@ -98,6 +101,24 @@ function update_points(){
 window.addEventListener('load', function () {
     for( let i = 0; i < 100; i++){
         make_point()
+    }
+    w = window.innerWidth;
+    h = window.innerHeight;
+    canvas.width = w;
+    canvas.height = h;
+});
+
+window.addEventListener('resize', function () {
+    w = window.innerWidth;
+    h = window.innerHeight;
+    canvas.width = w;
+    canvas.height = h;
+    const ideal_num_points = (w*h)/pixels_per_point;
+    while (points.length < Math.floor(ideal_num_points)){
+        make_point();
+    }
+    while (points.length > Math.floor(ideal_num_points)){
+        points.pop();
     }
 });
 

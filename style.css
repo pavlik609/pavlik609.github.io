@@ -61,6 +61,7 @@
 }
 
 .projectimg {
+    transition: 0.1s;
     border: 0.5px solid gray;
     border-radius: 7px;
 }

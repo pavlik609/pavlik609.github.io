@@ -99,13 +99,13 @@ function update_points(){
 }
 
 window.addEventListener('load', function () {
-    for( let i = 0; i < 100; i++){
-        make_point()
-    }
     w = window.innerWidth;
     h = window.innerHeight;
     canvas.width = w;
     canvas.height = h;
+    for( let i = 0; i < 100; i++){
+        make_point()
+    } 
 });
 
 window.addEventListener('resize', function () {

@@ -82,6 +82,11 @@
     width: fit-content;
     white-space: pre-line;
 }
+@media screen and (max-width: 768px) {
+    .text {
+        font-size: 40px;
+    }
+}
 .smalltext {
     color: white;
     font-size: 15px;

@@ -3,6 +3,9 @@ let cards = [];
 let mpos = {x: 0.1, y: 0.1};
 
 let card_margin = 5;
+let card_rotation = 50;
+
+let card_class = "projectimg";
 
 document.addEventListener('mousemove', function(event) {
     mpos.x = event.clientX;
@@ -35,8 +38,8 @@ function update_cards(){
         const x_diff = mpos.x-center.x;
         const y_diff = mpos.y-center.y;
 
-        const xang = (x_diff/w)*50;
-        const yang = (y_diff/h)*50;
+        const xang = (x_diff/w)*card_rotation;
+        const yang = (y_diff/h)*card_rotation;
 
         element.style.transform = tmp;
 
@@ -52,8 +55,12 @@ function update_cards(){
     window.requestAnimationFrame(update_cards);
 }
 
+function refresh_cards(){
+    cards = document.getElementsByClassName(card_class);
+}
+
 window.addEventListener('load', function () {
-    cards = document.getElementsByClassName("projectimg");
+    cards = document.getElementsByClassName(card_class);
     window.requestAnimationFrame(update_cards);
 });
 
